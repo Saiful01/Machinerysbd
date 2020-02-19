@@ -18,13 +18,16 @@
                     <!-- The slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img style="height: 500px" src="/images/slider/{{$sliders[0]->slider_image}}" alt="Los Angeles" width="1100" height="500">
+                            <img style="height: 500px" src="/images/slider/{{$sliders[0]->slider_image}}"
+                                 alt="Los Angeles" width="1100" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img style="height: 500px" src="/images/slider/{{$sliders[0]->slider_image}}" alt="Chicago" width="1100" height="500">
+                            <img style="height: 500px" src="/images/slider/{{$sliders[0]->slider_image}}" alt="Chicago"
+                                 width="1100" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img style="height: 500px" src="/images/slider/{{$sliders[0]->slider_image}}" alt="New York" width="1100" height="500">
+                            <img style="height: 500px" src="/images/slider/{{$sliders[0]->slider_image}}" alt="New York"
+                                 width="1100" height="500">
                         </div>
                     </div>
 
@@ -47,7 +50,8 @@
                         <div class="promotion-banner style-1">
                             @foreach($promotions as $promotion)
                                 <a href="#" class="banner-img">
-                                    <img style="height: 240px" src="/images/promotion/{{$promotion->promotion_image}}" alt="banner-1">
+                                    <img style="height: 240px" src="/images/promotion/{{$promotion->promotion_image}}"
+                                         alt="banner-1">
                                 </a>
 
                                 <div class="promotion-banner-inner">
@@ -60,7 +64,8 @@
                     </div>
                     <div class="col-md-7 col-sm-7">
                         <div class="promotion-banner style-1">
-                            <a href="#" class="banner-img"><img  style="height: 240px" src="/images/promotion/{{$promotion->promotion_image}}"
+                            <a href="#" class="banner-img"><img style="height: 240px"
+                                                                src="/images/promotion/{{$promotion->promotion_image}}"
                                                                 alt="banner-2"></a>
                             <div class="promotion-banner-inner">
                                 <h4>{{$promotion->promotion_name}}</h4>
@@ -82,15 +87,16 @@
                                 <div class="product-inner equal-elem">
                                     <div class="product-thumb">
                                         <div class="thumb-inner">
-                                            <a href="/details/{{$featured_item->product_id}}"><img height="200px" src="/images/product/{{$featured_item->featured_image}}"
-                                                             alt="p1"></a>
+                                            <a href="/details/{{$featured_item->product_id}}"><img height="200px"
+                                                                                                   src="/images/product/{{$featured_item->featured_image}}"
+                                                                                                   alt="p1"></a>
                                         </div>
                                         <span class="onsale">-50%</span>
                                         <a href="#" class="quick-view">Quick View</a>
                                     </div>
                                     <div class="product-innfo">
                                         <div class="product-name"><a
-                                                href="/images/product/">{{$featured_item->product_name}}
+                                                    href="/images/product/">{{$featured_item->product_name}}
                                             </a></div>
                                         <span class="price">
                                                             <ins>{{$featured_item->selling_price}} টাকা/ </ins>
@@ -107,7 +113,7 @@
                                         <div class="group-btn-hover">
                                             <div class="inner">
 
-                                                <a href="#" class="add-to-cart">Add to cart</a>
+                                                <button type="button" class="add-to-cart"  ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">Add to cart</button>
 
                                             </div>
                                         </div>
@@ -132,8 +138,9 @@
                                     <div class="product-inner equal-elem">
                                         <div class="product-thumb">
                                             <div class="thumb-inner">
-                                                <a href=/details/{{$new_product->product_id}}><img style="height: 150px" src="/images/product/{{$new_product->featured_image}}"
-                                                                 alt="p1"></a>
+                                                <a href=/details/{{$new_product->product_id}}><img style="height: 150px"
+                                                                                                   src="/images/product/{{$new_product->featured_image}}"
+                                                                                                   alt="p1"></a>
                                             </div>
                                             <span class="onsale">-50%</span>
                                             {{--                                            <a href="#" class="quick-view">Quick View</a>--}}
@@ -156,7 +163,7 @@
                                             <div class="group-btn-hover">
                                                 <div class="inner">
 
-                                                    <a href="#" class="add-to-cart">Add to cart</a>
+                                                    <button type="button" class="add-to-cart"  ng-click="addToCart('{{$new_product->product_id}}','{{$new_product->product_name}}','{{$new_product->featured_image}}','{{$new_product->selling_price}}')">Add to cart</button>
 
                                                 </div>
                                             </div>
@@ -174,7 +181,9 @@
         <div class="block-section-6">
             <div class="container">
                 <div class="promotion-banner box-single style-2">
-                    <a href="#" class="banner-img"><img style="height: 200px" src="/images/promotion/{{$promotion->promotion_image}}" alt="banner-3"></a>
+                    <a href="#" class="banner-img"><img style="height: 200px"
+                                                        src="/images/promotion/{{$promotion->promotion_image}}"
+                                                        alt="banner-3"></a>
                     <div class="promotion-banner-inner">
                         <h4>Performance to Drive The World</h4>
                         <h3>ALL NEW ENGINE ACCESSORIES</h3>
@@ -194,8 +203,9 @@
                                     <div class="product-inner equal-elem">
                                         <div class="product-thumb">
                                             <div class="thumb-inner">
-                                                <a href="/details/{{$new_product->product_id}}"><img src="/images/product/{{$featured_item->featured_image}}"
-                                                                 alt="p1"></a>
+                                                <a href="/details/{{$new_product->product_id}}"><img
+                                                            src="/images/product/{{$featured_item->featured_image}}"
+                                                            alt="p1"></a>
                                             </div>
                                             <span class="onsale">-50%</span>
                                             {{--                                            <a href="#" class="quick-view">Quick View</a>--}}
@@ -218,7 +228,7 @@
                                             <div class="group-btn-hover">
                                                 <div class="inner">
 
-                                                    <a href="#" class="add-to-cart">Add to cart</a>
+                                                    <button type="button" class="add-to-cart"  ng-click="addToCart('{{$new_product->product_id}}','{{$new_product->product_name}}','{{$new_product->featured_image}}','{{$new_product->selling_price}}')">Add to cart</button>
 
                                                 </div>
                                             </div>
@@ -235,4 +245,4 @@
         </div>
     </main><!-- end MAIN -->
 
-    @endsection
+@endsection

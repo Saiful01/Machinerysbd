@@ -22,7 +22,12 @@ class CustomerController extends Controller
 
     public function checkout()
     {
-        return view('ecommerce.pages.checkout.index')->with('categories', Category::orderBy('created_at', 'DESC')->limit(10)->get());
+        return view('frontend.pages.checkout.index')
+            ->with('customer', null)
+            ->with('categories', Category::orderBy('created_at', 'DESC')
+                ->limit(10)
+                ->get());
+
     }
 
 
@@ -31,13 +36,13 @@ class CustomerController extends Controller
         //$cart = new Cart();
 
         if (Session::get('customer_id')) {
-            return view('ecommerce.pages.cart.index')
+            return view('frontend.pages.cart.index')
                 ->with('customer', Customer::where('customer_id', Session::get('customer_id'))->first())
                 ->with('categories', Category::orderBy('created_at', 'DESC')
                     ->limit(10)
                     ->get());
         } else {
-            return view('ecommerce.pages.cart.index')
+            return view('frontend.pages.cart.index')
                 ->with('customer', null)
                 ->with('categories', Category::orderBy('created_at', 'DESC')
                     ->limit(10)

@@ -51,6 +51,9 @@ Route::post('/product/cart-l/add', 'HomeController@addTocartMultiple');
 
 //Customer
 /*Route::get('/customer/checkout', 'CustomerController@checkout');*/
+Route::get('/checkout', 'CustomerController@checkout');
+
+
 Route::get('/customer/checkout', 'CustomerController@cart');
 Route::get('/customer/cart', 'CustomerController@cart');
 Route::post('/customer/order/store', 'CustomerController@placeOrder');

@@ -13,7 +13,7 @@ class SliderSeeder extends Seeder
     {
 
         \App\Slider::create([
-                'slider_image' => 'default.jpg',
+                'slider_image' => '1.png',
                 'slider_name' => 'deafult',
             ]
         );
