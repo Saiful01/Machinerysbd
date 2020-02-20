@@ -112,7 +112,7 @@ class CustomerController extends Controller
                 }
 
 
-                $this->sendSms($request['customer_name'], $request['customer_phone'],$invoice);
+                //$this->sendSms($request['customer_name'], $request['customer_phone'],$invoice);
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Successfully Saved',
@@ -237,15 +237,15 @@ class CustomerController extends Controller
         return Redirect::to('/');
     }
 
-    private function sendSms($customer_name, $customer_phone, $invoice)
+   /* private function sendSms($customer_name, $customer_phone, $invoice)
     {
         $message = "Dear, " . $customer_name . " Your order have been submitted. Your invoice number is: ".$invoice;
         $owner = "kenarhat.com";
         try {
             $soapClient = new SoapClient("https://api2.onnorokomSMS.com/sendSMS.asmx?wsdl");
             $paramArray = array(
-                'userName' => "01717849968",
-                'userPassword' => "3f718e",
+                'userName' => "",
+                'userPassword' => "m3f718e",
                 'mobileNumber' => $customer_phone,
                 'smsText' => $message . " - " . $owner,
                 'type' => "TEXT",
@@ -263,6 +263,6 @@ class CustomerController extends Controller
             //echo $e->getMessage();
             //echo '{"status" : "sms_send_decline", "message": "' . $e->getMessage() . '"}';
         }
-    }
+    }*/
 
 }

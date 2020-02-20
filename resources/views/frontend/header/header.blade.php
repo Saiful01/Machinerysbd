@@ -5,7 +5,7 @@
         <div class="container">
             <!-- hotline -->
             <ul class="nav-top-left">
-                <li><a href="#">Welcome to M Shop</a></li>
+                <li><a href="#">Welcome to Machinery Shop BD</a></li>
             </ul><!-- hotline -->
             <!-- heder links -->
             <ul class="nav-top-right rhyssa-nav">
@@ -152,11 +152,11 @@
 
                             </li>
                             <li class="menu-item-has-children ">
-                                <a href="/contact">যোগাযোগ</a>
+                                <a href="#">যোগাযোগ</a>
 
                             </li>
 
-                            <li>
+                            <li class="text-white" style="margin-left: 400px">
                                  <span class="counter qty">
 
                                         <span class="cart-icon"><i class="fa fa-shopping-bag"
@@ -168,7 +168,7 @@
                             </li>
 
 
-                            <li>
+                            <li class="text-white">
                                 সর্বমোট: @{{ totalPriceCountAll}}টাকা
                             </li>
 

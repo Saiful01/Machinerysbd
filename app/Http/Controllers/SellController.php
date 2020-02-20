@@ -113,7 +113,7 @@ class SellController extends Controller
             $from = $request['from'];
             $to = $request['to'];
 
-            $result = Sell::join('customers', 'customers.customer_id', '=', 'sells.customer_id')
+            $result = Sell::leftJoin('customers', 'customers.customer_id', '=', 'sells.customer_id')
                 ->where('sells.delivery_status', '!=', 0)
                 ->where('sells.delivery_status', '!=', 4)
                 ->orderBy('sells.sell_id', "DESC")

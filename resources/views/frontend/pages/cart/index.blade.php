@@ -58,10 +58,8 @@
                             </table>
                         </div>
                         <div class="cart-actions">
-                            <a href="/" type="submit" class="btn btn-continue text-danger">
-                                <span>Continue Shopping</span>
-                            </a>
-                           {{-- <button type="submit" class="btn-clean">
+                            <a  href="/"> <button type="button" > কেনাকাটা চালিয়ে যান</button></a>
+                           {{-- <button type="submit" class="btn-clean"><span>কেনাকাটা চালিয়ে যান</span>
                                 <span>Update Shopping Cart</span>
                             </button>
                             <button type="submit" class="btn-update">
@@ -77,13 +75,8 @@
                             <span class="order-left">Subtotal:<span>@{{ totalPriceCountAll}} টাকা</span></span>
                             <span class="order-left">Shipping:<span>@{{ shipping_cost}} টাকা</span></span>
                             <span class="order-left">Total:<span>@{{ shipping_cost+totalPriceCountAll }} টাকা</span></span>
-                            <ul>
-                                <li><label class="inline"><input type="checkbox"><span class="input"></span>I have promo
-                                        code</label></li>
-                            </ul>
-                            <a href="/checkout" type="submit" class="btn-checkout">
-                                <span>Check Out</span>
-                            </a>
+                          <a href="/checkout"> <button type="button" class="btn-order" >অর্ডার
+                                করুন </button></a>
                         </div>
                     </div>
                 </div>
