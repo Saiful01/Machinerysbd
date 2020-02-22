@@ -5,12 +5,12 @@
         <div class="container">
             <!-- hotline -->
             <ul class="nav-top-left">
-                <li><a href="#">Welcome to Machinery Shop BD</a></li>
+                <li><a href="#">মেশিনারি শপে স্বাগতম। </a></li>
             </ul><!-- hotline -->
             <!-- heder links -->
             <ul class="nav-top-right rhyssa-nav">
 
-                <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Register / Sign in</a></li>
+                {{-- <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Register / Sign in</a></li>--}}
             </ul><!-- heder links -->
         </div>
     </div> <!-- header-top -->
@@ -28,27 +28,33 @@
                     <!-- block search -->
                     <div class="block-search">
                         <div class="block-content">
-                            <div class="categori-search  ">
-                                <select data-placeholder="All Categories"
-                                        class="chosen-select categori-search-option">
-                                    <option value="">All Categories</option>
-                                    @foreach($categories as $category)
+                            <form action="/search" method="get">
+                                <div class="categori-search  ">
+                                    <select data-placeholder="All Categories"
+                                            class="chosen-select categori-search-option" name="category">
+                                        <option value="">সকল ক্যাটেগরি</option>
+                                        @foreach($categories as $category)
 
-                                        <option>{{$category->category_name}}</option>
-                                    @endforeach
+                                            <option value="{{$category->category_id}}">{{$category->category_name}}</option>
+                                        @endforeach
 
-                                </select>
-                            </div>
-                            <div class="form-search">
-                                <form>
+                                    </select>
+                                </div>
+                                <div class="form-search">
+
                                     <div class="box-group">
                                         <input type="text" class="form-control"
-                                               placeholder="Search keyword here...">
-                                        <button class="btn btn-search" type="button"><span
+                                               placeholder="সার্চ করুন " name="search_query">
+
+                                        <input type="hidden" class="form-control" name="_token" value="{{csrf_token()}}">
+
+
+                                        <button class="btn btn-search" type="submit"><span
                                                     class="fa fa-search"></span></button>
                                     </div>
-                                </form>
-                            </div>
+
+                                </div>
+                            </form>
                         </div>
                     </div><!-- block search -->
                 </div>
@@ -70,14 +76,14 @@
                                         <span class="cart-icon"><i class="fa fa-shopping-bag"
                                                                    aria-hidden="true"></i></span>
 
-                                        <span class="counter-number">@{{ getProductCartInfo().totalCount}} টি</span>
+                                        <span class="counter-number" ng-cloak>@{{ getProductCartInfo().totalCount}} টি</span>
 
                                     </span>
                             <span class="counter-your-cart">
 
                                         <span class="counter-label">সর্বমোট:</span>
 
-                                        <span class="counter-price"> @{{ totalPriceCountAll}}টাকা</span>
+                                        <span class="counter-price" ng-cloak> @{{ totalPriceCountAll}}টাকা</span>
 
                                     </span>
                         </a>
@@ -85,7 +91,7 @@
                             <form>
                                 <div class="minicart-content-wrapper">
                                     <div class="subtitle">
-                                        You have <span>@{{ getProductCartInfo().totalCount}}</span> item(s) in your
+                                        You have <span ng-cloak>@{{ getProductCartInfo().totalCount}}</span> item(s) in your
                                         cart
                                     </div>
                                     <div class="minicart-items-wrapper">
@@ -100,10 +106,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-innfo">
-                                                    <div class="product-name"><a href="/product/details/@{{ item.id }}">@{{ item.name}}
+                                                    <div class="product-name"><a href="/product/details/@{{ item.id }}">@{{
+                                                            item.name}}
                                                         </a></div>
-                                                    <a href="#" class="remove" ng-click="removeItem(item)"><i class="fa fa-times"
-                                                                                  aria-hidden="true"></i></a>
+                                                    <a href="#" class="remove" ng-click="removeItem(item)"><i
+                                                                class="fa fa-times"
+                                                                aria-hidden="true"></i></a>
                                                     <span class="price price-dark">
 
                                                                 <ins>@{{ item.qnt* item.price}} BDT</ins>
@@ -156,19 +164,19 @@
 
                             </li>
 
-                            <li class="text-white" style="margin-left: 400px">
-                                 <span class="counter qty">
+                            <li class="text-white float-right">
+                                 <a href="/customer/checkout" class="counter qty">
 
                                         <span class="cart-icon"><i class="fa fa-shopping-bag"
                                                                    aria-hidden="true"></i></span>
 
                                         <span class="counter-number">@{{ getProductCartInfo().totalCount}} টি</span>
 
-                                    </span>
+                                    </a>
                             </li>
 
 
-                            <li class="text-white">
+                            <li class="text-white float-right">
                                 সর্বমোট: @{{ totalPriceCountAll}}টাকা
                             </li>
 
