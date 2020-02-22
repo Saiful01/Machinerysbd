@@ -156,7 +156,7 @@
 
                             </li>
 
-                            <li class="text-white" style="margin-left: 400px">
+                            <li class="text-white float-right" >
                                  <span class="counter qty">
 
                                         <span class="cart-icon"><i class="fa fa-shopping-bag"
@@ -168,7 +168,7 @@
                             </li>
 
 
-                            <li class="text-white">
+                            <li class="text-white float-right">
                                 সর্বমোট: @{{ totalPriceCountAll}}টাকা
                             </li>
 

@@ -49,11 +49,12 @@ class HomeController extends Controller
     }
     public function details($id){
 
-
+        $new_products = Product::orderBy('product_id', 'DESC')->where('publish_status', true)->get();
         $featured_items= Product::where('product_id', $id)->first();
         return view('frontend.home.details')
             ->with('featured_item', $featured_items)
-            ->with('categories', Category::orderBy('created_at', 'DESC')->get());
+            ->with('categories', Category::orderBy('created_at', 'DESC')->get())
+            ->with('new_products', $new_products);
 
     }
 

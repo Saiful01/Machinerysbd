@@ -100,7 +100,7 @@
                                             </a></div>
                                         <span class="price">
                                                             <ins>{{$featured_item->selling_price}} টাকা/ </ins>
-                                                            <del>{{$featured_item->regular_price}} টাকা</del>
+                                                            <del>{{$featured_item->selling_price}} টাকা/</del>
                                                         </span>
                                         <span class="star-rating">
                                                             <i class="fa fa-star" aria-hidden="true"></i>

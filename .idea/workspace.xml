@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7d85e0-62c6-4e4a-a02b-bf8bedff1708" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SellController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SellController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom_angular.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom_angular.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/footer/foot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/footer/foot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/header/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/header/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/header/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/header/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/cart/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/cart/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/checkout/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/checkout/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home/details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/home/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,12 +121,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
-  </component>
   <component name="ProjectId" id="1XvIQmMzN8K7spU5ck3z4UHW0EO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -144,7 +131,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../joldi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Eventtech" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -269,6 +256,7 @@
       <workItem from="1582093960749" duration="2371000" />
       <workItem from="1582104934482" duration="4278000" />
       <workItem from="1582179128374" duration="66000" />
+      <workItem from="1582191892917" duration="5808000" />
     </task>
     <servers />
   </component>
@@ -298,10 +286,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="476" y="140" width="424" height="482" key="FileChooserDialogImpl" timestamp="1582179192655">
+    <state x="476" y="140" width="424" height="482" key="FileChooserDialogImpl" timestamp="1582202820282">
       <screen x="40" y="0" width="1326" height="768" />
     </state>
-    <state x="476" y="140" width="424" height="482" key="FileChooserDialogImpl/40.0.1326.768@40.0.1326.768" timestamp="1582179192655" />
+    <state x="476" y="140" width="424" height="482" key="FileChooserDialogImpl/40.0.1326.768@40.0.1326.768" timestamp="1582202820282" />
     <state x="379" y="118" width="628" height="528" key="find.popup" timestamp="1582019547632">
       <screen x="40" y="0" width="1326" height="768" />
     </state>
