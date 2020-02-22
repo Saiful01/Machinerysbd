@@ -8,76 +8,50 @@
     <main class="site-main checkout">
         <div class="container">
             <ol class="breadcrumb-page">
-                <li><a href="#">Home </a></li>
-                <li class="active"><a href="#">checkout</a></li>
+                <li><a href="#">হোম </a></li>
+                <li class="active"><a href="#">চেকআউট</a></li>
             </ol>
         </div>
         <div class="container">
             <form action="#" class="checkout" method="post" name="checkout">
-                <h4 class="title-checkout">Biiling Address</h4>
+                <h4 class="title-checkout">বিলিং ঠিকানা</h4>
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label class="title">First Name*</label>
-                        <input type="text" class="form-control" id="forFName" placeholder="Your name">
+                        <label class="title">পুরো নাম*</label>
+                        <input type="text" class="form-control" id="firstname"
+                               name="customer_name" required=""
+                               ng-model="customer_name">
+                        <input class="form-control" type="hidden" name="_token"
+                               value="{{csrf_token()}}" autocomplete="off">
                     </div>
                     <div class="form-group col-md-6">
-                        <label class="title">Last Name*</label>
-                        <input type="text" class="form-control" id="forLName" placeholder="Your last name">
+                        <label class="title">ইমেইল:</label>
+                        <input type="email" class="form-control" id="input-payment-email"
+                               name="customer_email" ng-model="customer_email">
                     </div>
                     <div class="form-group col-md-6">
-                        <label class="title">Email Addreess:</label>
-                        <input type="email" class="form-control" id="forEmail" placeholder="Type your email">
+                        <label class="title"> ফোন *</label>
+                        <input type="text" class="form-control" id="input-payment-lastname"
+                               name="customer_phone" required=""
+                               ng-model="customer_phone">
                     </div>
                     <div class="form-group col-md-6">
-                        <label class="title">Phone numbber*</label>
-                        <input type="text" class="form-control" placeholder="10 digits format">
+                        <label class="title">ঠিকানা:</label>
+                        <textarea type="text" class="form-control" id="input-payment-telephone"
+                                  name="customer_address1"
+                                  required="" ng-model="customer_address1"></textarea>
                     </div>
                     <div class="form-group col-md-6">
-                        <label class="title">Address:</label>
-                        <input type="text" class="form-control" placeholder="Street at apartment number">
+                        <label class="title">জেলা*</label>
+                        <input type="text" class="form-control" id="input-payment-fax"
+                               name="customer_city" required=""
+                               ng-model="customer_city">
                     </div>
-                    <div class="form-group col-md-6">
-                        <label class="title">Country*</label>
-                        <input type="text" class="form-control" placeholder="United States">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="title">Postcode / ZIP:</label>
-                        <input type="text" class="form-control" placeholder="Your postal code">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="title">Town / City*</label>
-                        <input type="text" class="form-control" placeholder="City name">
-                    </div>
-                    <div class="form-group shipping col-md-6">
-                        <ul>
-                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Create an
-                                    account?</label></li>
-                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Ship to a
-                                    different address?</label></li>
-                        </ul>
-                        <h4 class="title-checkout">Shipping method</h4>
-                        <p>Flat Rate</p>
-                        <p>Fixed $50.00</p>
-                        <h4 class="discount">Discount Codes</h4>
-                        <label class="title">Enter Your Coupon code:</label>
-                        <input type="text" class="form-control">
-                        <button type="submit" class="btn-apply">Apply</button>
-                    </div>
+
                     <div class="form-group payment col-md-6">
-                        <h4 class="title-checkout">Payment Method</h4>
-                        <p>Check / Money order</p>
-                        <p>Credit Cart (saved)</p>
-                        <ul>
-                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Direct Bank
-                                    Transder</label></li>
-                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Cash on Delivery</label>
-                            </li>
-                            <li><label class="inline"><input type="checkbox"><span class="input"></span>Paypal</label>
-                            </li>
-                        </ul>
-                        <p class="credit">You can pay with your credit<br> card if you don't have a paypal account</p>
-                        <span class="grand-total">Grand Total<span>$100.00</span></span>
-                        <button type="submit" class="btn-order">Place Order Now</button>
+                        <span class="grand-total">Grand Total<span>@{{ shipping_cost+totalPriceCountAll }} টাকা</span></span>
+                        <button type="button" class="btn-order" ng-click="saveProducts(cartItemPList)">অর্ডার
+                            করুন</button>
                     </div>
                 </div>
             </form>

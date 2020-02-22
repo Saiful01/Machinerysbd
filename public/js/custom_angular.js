@@ -1,74 +1,3 @@
-/*
-var myAngularApp = angular.module('myAngular', []);
-myAngularApp.controller("productCartController", function ($scope, $http) {
-    $scope.loadCartItems = function () {
-        $http.get('/cart/all')
-            .then(function success(e) {
-                $scope.items = e.data.items;
-                $scope.skills = e.data.items;
-                console.log($scope.items);
-                console.log($scope.total_quantity);
-                console.log($scope.total_money);
-            }, function error(error) {
-                $scope.recordErrors(error);
-            });
-    };
-    $scope.loadCartItems();
-
-    $scope.productRemove = function (id) {
-
-        console.log(id);
-        $http.post('/cart/remove', {
-            id: id,
-
-        }).then(function success(e) {
-            //console.log(e.data);
-            if (e.data.status == "success") {
-                console.log(e.data.message);
-            } else {
-                console.log(e.data.message);
-            }
-        });
-        $scope.loadCartItems();
-    };
-
-
-    $scope.productAddIntoCart = function (id, product_name, qnt, price) {
-        //console.log(id + "--" + product_name + "--" + qnt + "--" + price);
-        $http.post('/cart/add', {
-            id: id,
-            product_name: product_name,
-            qnt: qnt,
-            price: price
-
-        }).then(function success(e) {
-            //console.log(e.data);
-            if (e.data.status == "success") {
-                console.log(e.data.message);
-            } else {
-                console.log(e.data.message);
-            }
-        });
-
-
-        $scope.newProduct = {};
-        $scope.loadCartItems();
-
-        /!*                $scope.newProduct.id=5;
-                        $scope.newProduct.name=5;
-                        $scope.newProduct.quantity=5;
-                        $scope.newProduct.price=5;
-
-
-                       // $scope.skills.push($scope.newProduct)
-                        console.log($scope.skills);*!/
-    };
-
-
-
-});*/
-
-
 var app = angular.module('myApp', []);
 
 
@@ -388,6 +317,8 @@ app.controller('myCtrl', function ($scope, $http) {
             /*console.log("Error");*/
         } else {
             $http.post('/customer/order/store', {
+
+
                 items: items,
                 customer_name: $scope.customer_name,
                 customer_phone: $scope.customer_phone,
@@ -400,7 +331,7 @@ app.controller('myCtrl', function ($scope, $http) {
 
             }).then(function success(e) {
 
-                /*console.log(e);*/
+                console.log(e);
                 if (e.data.status == "success") {
                     /*console.log(e.data.message);*/
                     localStorage.removeItem('cartProductList');
@@ -422,6 +353,9 @@ app.controller('myCtrl', function ($scope, $http) {
                 }
 
             }, function error(error) {
+
+                console.log("Error");
+
 
                 messageError( error.statusText, 'Error');
             });
