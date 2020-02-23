@@ -106,19 +106,19 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Featured Image <span style="color: red">600*600PX</span></label>
+                            <label class="col-sm-2 col-form-label">Featured Image <span style="color: red">248*248PX</span></label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="file" name="feature_image" >
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Product Image1 <span style="color: red">600*600PX</span></label>
+                            <label class="col-sm-2 col-form-label">Product Image1 <span style="color: red">248*248PX</span></label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="file" name="product_image1">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Product Image2 <span style="color: red">600*600PX</span></label>
+                            <label class="col-sm-2 col-form-label">Product Image2 <span style="color: red">248*248PX</span></label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="file" name="product_image2">
                             </div>

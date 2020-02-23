@@ -35,7 +35,9 @@
                                         <option value="">সকল ক্যাটেগরি</option>
                                         @foreach($categories as $category)
 
-                                            <option value="{{$category->category_id}}">{{$category->category_name}}</option>
+
+                                            <option
+                                                value="{{$category->category_id}}">{{$category->category_name}}</option>
                                         @endforeach
 
                                     </select>
@@ -46,11 +48,12 @@
                                         <input type="text" class="form-control"
                                                placeholder="সার্চ করুন " name="search_query">
 
-                                        <input type="hidden" class="form-control" name="_token" value="{{csrf_token()}}">
+                                        <input type="hidden" class="form-control" name="_token"
+                                               value="{{csrf_token()}}">
 
 
                                         <button class="btn btn-search" type="submit"><span
-                                                    class="fa fa-search"></span></button>
+                                                class="fa fa-search"></span></button>
                                     </div>
 
                                 </div>
@@ -76,7 +79,8 @@
                                         <span class="cart-icon"><i class="fa fa-shopping-bag"
                                                                    aria-hidden="true"></i></span>
 
-                                        <span class="counter-number" ng-cloak>@{{ getProductCartInfo().totalCount}} টি</span>
+                                        <span class="counter-number"
+                                              ng-cloak>@{{ getProductCartInfo().totalCount}} টি</span>
 
                                     </span>
                             <span class="counter-your-cart">
@@ -91,7 +95,8 @@
                             <form>
                                 <div class="minicart-content-wrapper">
                                     <div class="subtitle">
-                                        You have <span ng-cloak>@{{ getProductCartInfo().totalCount}}</span> item(s) in your
+                                        You have <span ng-cloak>@{{ getProductCartInfo().totalCount}}</span> item(s) in
+                                        your
                                         cart
                                     </div>
                                     <div class="minicart-items-wrapper">
@@ -110,8 +115,8 @@
                                                             item.name}}
                                                         </a></div>
                                                     <a href="#" class="remove" ng-click="removeItem(item)"><i
-                                                                class="fa fa-times"
-                                                                aria-hidden="true"></i></a>
+                                                            class="fa fa-times"
+                                                            aria-hidden="true"></i></a>
                                                     <span class="price price-dark">
 
                                                                 <ins>@{{ item.qnt* item.price}} BDT</ins>
@@ -148,13 +153,12 @@
                             <li class="menu-item-has-children ">
                                 <a href="/">হোম</a>
                             </li>
-                            <li class="menu-item-has-children ">
-                                <a href="#">{{$categories[0]->category_name}}</a>
-                            </li>
-                            <li class="menu-item-has-children  item-megamenu">
-                                <a href="#">{{$categories[1]->category_name}}</a>
+                            @foreach($categories as $category)
 
-                            </li>
+                                <li class="menu-item-has-children ">
+                                    <a href="/categorie/{{$category->category_id}}">{{$category->category_name}}</a>
+                                </li>
+                            @endforeach
                             <li class="menu-item-has-children ">
                                 <a href="#">আমাদের সম্পর্কে</a>
 
@@ -165,14 +169,14 @@
                             </li>
 
                             <li class="text-white float-right">
-                                 <a href="/customer/checkout" class="counter qty">
+                                <a href="/customer/checkout" class="counter qty">
 
                                         <span class="cart-icon"><i class="fa fa-shopping-bag"
                                                                    aria-hidden="true"></i></span>
 
-                                        <span class="counter-number">@{{ getProductCartInfo().totalCount}} টি</span>
+                                    <span class="counter-number">@{{ getProductCartInfo().totalCount}} টি</span>
 
-                                    </a>
+                                </a>
                             </li>
 
 

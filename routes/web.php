@@ -15,6 +15,7 @@
 //Front Page
 Route::get('/', 'HomeController@home');
 Route::get('/details/{id}', 'HomeController@details');
+Route::get('/categorie/{id}', 'HomeController@categorie');
 //Route::get('/', 'HomeController@index');
 Route::get('/product/{id}', 'HomeController@index');
 Route::get('/product/details/{id}/{product_name}', 'HomeController@productDetails');

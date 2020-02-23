@@ -39,12 +39,12 @@
                     </div>
                 @endif
 
-                <div class="card-body"><h4 class="mt-0 header-title">Slider Details</h4>
+                <div class="card-body"><h4 class="mt-0 header-title">Promo Image Details</h4>
 
                     <form method="post" action="/admin/promotion/update" enctype="multipart/form-data">
 
                         <div class="form-group row">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">Slider Name</label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">Promo Image Name</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" name="promotion_name" value="{{$promotion->promotion_name}}">
                                 <input class="form-control" type="hidden" name="_token" value="{{csrf_token()}}">
@@ -56,7 +56,7 @@
 
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Promotion Image </label>
+                            <label class="col-sm-2 col-form-label">Promotion Image 670*250 PX</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="file" name="promotion_image" required>
                             </div>

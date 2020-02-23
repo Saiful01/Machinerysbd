@@ -204,7 +204,7 @@
                                         <div class="product-thumb">
                                             <div class="thumb-inner">
                                                 <a href="/details/{{$new_product->product_id}}"><img
-                                                            src="/images/product/{{$featured_item->featured_image}}"
+                                                            src="/images/product/{{$new_product->featured_image}}"
                                                             alt="p1"></a>
                                             </div>
                                             <span class="onsale">-50%</span>
@@ -217,14 +217,14 @@
                                                             <ins>{{$new_product->selling_price}} টাকা/ </ins>
                                                             <del>{{$new_product->regular_price}} টাকা</del>
                                                         </span>
-                                            <span class="star-rating">
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <span class="review">5 Review(s)</span>
-                                                        </span>
+{{--                                            <span class="star-rating">--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <span class="review">5 Review(s)</span>--}}
+{{--                                                        </span>--}}
                                             <div class="group-btn-hover">
                                                 <div class="inner">
 

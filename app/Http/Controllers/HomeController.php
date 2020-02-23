@@ -36,7 +36,6 @@ class HomeController extends Controller
         $promotions = PromotionSlide::limit(2)->get();
 
         return view('frontend.home.index')
-            ->with('categories', Category::orderBy('created_at', 'DESC')->get())
             ->with('categories', $category)
             ->with('featured_items', $featured_item)
             ->with('sliders', $slider)
@@ -58,6 +57,17 @@ class HomeController extends Controller
             ->with('featured_item', $featured_items)
             ->with('categories', Category::orderBy('created_at', 'DESC')->get())
             ->with('new_products', $new_products);
+
+    }
+    public function categorie($id) {
+
+        $category_name = Category::where('category_id', $id)->pluck('category_name')->first();
+        $prodcts = Product::where('product_category_id', $id)->get();
+        return view('frontend.pages.categories.index')
+            ->with('category_name', $category_name)
+            ->with('categories', Category::orderBy('created_at', 'DESC')->get())
+            ->with('products', $prodcts);
+
 
     }
 
@@ -261,18 +271,26 @@ class HomeController extends Controller
     public function search(Request $request)
     {
 
+        //return $request->all();
         $category = $request['category'];
         $search_query = $request['search_query'];
+        $category_name=null;
 
-         $product = Product::join('categories', 'categories.category_id', '=', 'products.product_category_id')
-            ->where('categories.category_id', $category)
-            ->where('products.product_name', 'LIKE', '%' . $search_query . '%')
-            ->where('products.publish_status', true)
-            ->get();
+        $db_query = Product::join('categories', 'categories.category_id', '=', 'products.product_category_id');
 
-        return view('ecommerce.pages.category_post.index')
+        if($category!=null){
+            $db_query->where('categories.category_id', $category);
+            $cat_name=Category::where('category_id',$category)->first();
+            $category_name=$cat_name->category_name;
+         }
+         $product= $db_query->where('products.product_name', 'LIKE', '%' . $search_query . '%')
+        ->where('products.publish_status', true)
+        ->get();
+
+       // return $product;
+        return view('frontend.pages.categories.index')
             ->with('categories',Category::get())
-            ->with('category_name',"gggg")
+            ->with('category_name',$category_name)
             ->with('products',$product);
 
 
