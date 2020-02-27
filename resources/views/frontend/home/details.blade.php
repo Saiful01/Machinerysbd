@@ -99,8 +99,7 @@
                                 </div>
                                 <div class="single-add-to-cart">
                                     <a href="#" class="btn-add-to-cart"
-                                       ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">Add
-                                        to cart</a>
+                                       ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">কার্ট যোগ করুন</a>
                                 </div>
                             </div>
 
@@ -112,7 +111,7 @@
         <div class="container">
             <div class="tab-details-product">
                 <ul class="box-tab nav-tab">
-                    <li class="active"><a data-toggle="tab" href="#tab-1">Description</a></li>
+                    <li class="active"><a data-toggle="tab" href="#tab-1">বিবরণ</a></li>
                     {{--                    <li><a data-toggle="tab" href="#tab-2">Addtional Infomation</a></li>--}}
                     {{--                    <li><a data-toggle="tab" href="#tab-3">Reviews</a></li>--}}
                 </ul>
@@ -127,7 +126,7 @@
         </div>
         <div class="block-recent-view">
             <div class="container">
-                <div class="title-of-section">You may be also interested</div>
+                <div class="title-of-section">আপনি আগ্রহী হতে পারেন</div>
                 <div class="owl-carousel nav-style2 border-background equal-container" data-nav="true"
                      data-autoplay="false" data-dots="false" data-loop="true" data-margin="30"
                      data-responsive='{"0":{"items":1},"480":{"items":2},"768":{"items":3},"992":{"items":4},"1200":{"items":4}}'>
@@ -152,21 +151,21 @@
                                                             <del>{{$new_product->regular_price}} টাকা</del>
 
                                     </span>
-                                    <span class="star-rating">
+{{--                                    <span class="star-rating">--}}
 
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+{{--                                        <i class="fa fa-star" aria-hidden="true"></i>--}}
 
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+{{--                                        <i class="fa fa-star" aria-hidden="true"></i>--}}
 
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+{{--                                        <i class="fa fa-star" aria-hidden="true"></i>--}}
 
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+{{--                                        <i class="fa fa-star" aria-hidden="true"></i>--}}
 
-                                        <i class="fa fa-star" aria-hidden="true"></i>
+{{--                                        <i class="fa fa-star" aria-hidden="true"></i>--}}
 
-                                        <span class="review">5 Review(s)</span>
+{{--                                        <span class="review">5 Review(s)</span>--}}
 
-                                    </span>
+{{--                                    </span>--}}
                                     <div class="group-btn-hover style2">
                                         <a href="#" class="add-to-cart"><i class="fa fa-shopping-bag"
                                                                            aria-hidden="true"></i></a>

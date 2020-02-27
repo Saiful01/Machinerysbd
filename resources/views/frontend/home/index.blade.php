@@ -79,10 +79,10 @@
         </div>
         <div class="block-section-4">
             <div class="container">
-                <div class="title-of-section">Featured Products</div>
+                <div class="title-of-section"> বৈশিষ্ট্যযুক্ত পণ্য </div>
                 <div class="tab-product tab-product-fade-effect">
                     @foreach($featured_items as $featured_item)
-                        <div class="col-md-4">
+                        <div class="col-md-4 mb-3">
                             <div class="product-item style1">
                                 <div class="product-inner equal-elem">
                                     <div class="product-thumb">
@@ -92,7 +92,7 @@
                                                                                                    alt="p1"></a>
                                         </div>
                                         <span class="onsale">-50%</span>
-                                        <a href="#" class="quick-view">Quick View</a>
+{{--                                        <a href="#" class="quick-view">Quick View</a>--}}
                                     </div>
                                     <div class="product-innfo">
                                         <div class="product-name"><a
@@ -102,18 +102,18 @@
                                                             <ins>{{$featured_item->selling_price}} টাকা/ </ins>
                                                             <del>{{$featured_item->selling_price}} টাকা/</del>
                                                         </span>
-                                        <span class="star-rating">
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <span class="review">5 Review(s)</span>
-                                                        </span>
+{{--                                        <span class="star-rating">--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <span class="review">5 Review(s)</span>--}}
+{{--                                                        </span>--}}
                                         <div class="group-btn-hover">
                                             <div class="inner">
 
-                                                <button type="button" class="add-to-cart"  ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">Add to cart</button>
+                                                <button type="button" class="add-to-cart"  ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">কার্ট যোগ করুন</button>
 
                                             </div>
                                         </div>
@@ -130,10 +130,10 @@
         <div class="block-section-5">
             <div class="full-width background-section-5">
                 <div class="container">
-                    <div class="title-of-section style2">Top Selling</div>
+                    <div class="title-of-section style2">সর্বাধিক বিক্রিত </div>
                     <div class="tab-product tab-product-fade-effect">
                         @foreach($new_products as $new_product)
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-3">
                                 <div class="product-item style1">
                                     <div class="product-inner equal-elem">
                                         <div class="product-thumb">
@@ -152,18 +152,18 @@
                                                             <ins>{{$new_product->selling_price}} টাকা/ </ins>
                                                             <del>{{$new_product->regular_price}} টাকা</del>
                                                         </span>
-                                            <span class="star-rating">
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <span class="review">5 Review(s)</span>
-                                                        </span>
+{{--                                            <span class="star-rating">--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <i class="fa fa-star" aria-hidden="true"></i>--}}
+{{--                                                            <span class="review">5 Review(s)</span>--}}
+{{--                                                        </span>--}}
                                             <div class="group-btn-hover">
                                                 <div class="inner">
 
-                                                    <button type="button" class="add-to-cart"  ng-click="addToCart('{{$new_product->product_id}}','{{$new_product->product_name}}','{{$new_product->featured_image}}','{{$new_product->selling_price}}')">Add to cart</button>
+                                                    <button type="button" class="add-to-cart"  ng-click="addToCart('{{$new_product->product_id}}','{{$new_product->product_name}}','{{$new_product->featured_image}}','{{$new_product->selling_price}}')">কার্ট যোগ করুন</button>
 
                                                 </div>
                                             </div>
@@ -185,9 +185,9 @@
                                                         src="/images/promotion/{{$promotion->promotion_image}}"
                                                         alt="banner-3"></a>
                     <div class="promotion-banner-inner">
-                        <h4>Performance to Drive The World</h4>
-                        <h3>ALL NEW ENGINE ACCESSORIES</h3>
-                        <a class="banner-link" href="#">Shop now</a>
+                        <h4>পারফরম্যান্স দ্য ওয়ার্ল্ড চালানোর জন্য</h4>
+                        <h3>সমস্ত নতুন ইঞ্জিন এক্সেসরিজ</h3>
+                        <a class="banner-link" href="#">এখনই কিনুন</a>
                     </div>
                 </div>
             </div>
@@ -195,15 +195,15 @@
         <div class="block-section-7">
             <div class="full-width background-section-5">
                 <div class="container">
-                    <div class="title-of-section style2">Recently Products</div>
+                    <div class="title-of-section style2">সম্প্রতি পণ্য</div>
                     <div class="tab-product tab-product-fade-effect">
                         @foreach($new_products as $new_product)
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-3">
                                 <div class="product-item style1">
                                     <div class="product-inner equal-elem">
                                         <div class="product-thumb">
                                             <div class="thumb-inner">
-                                                <a href="/details/{{$new_product->product_id}}"><img
+                                                <a href="/details/{{$new_product->product_id}}"><img style="height: 250px"
                                                             src="/images/product/{{$new_product->featured_image}}"
                                                             alt="p1"></a>
                                             </div>
@@ -228,7 +228,7 @@
                                             <div class="group-btn-hover">
                                                 <div class="inner">
 
-                                                    <button type="button" class="add-to-cart"  ng-click="addToCart('{{$new_product->product_id}}','{{$new_product->product_name}}','{{$new_product->featured_image}}','{{$new_product->selling_price}}')">Add to cart</button>
+                                                    <button type="button" class="add-to-cart"  ng-click="addToCart('{{$new_product->product_id}}','{{$new_product->product_name}}','{{$new_product->featured_image}}','{{$new_product->selling_price}}')">কার্ট যোগ করুন</button>
 
                                                 </div>
                                             </div>

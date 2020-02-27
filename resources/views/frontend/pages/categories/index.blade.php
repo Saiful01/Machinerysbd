@@ -65,8 +65,7 @@
                                         </span>
                                         <div class="single-add-to-cart">
                                             <button class="btn-add-to-cart"
-                                               ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">Add
-                                                to cart</button>
+                                               ng-click="addToCart('{{$featured_item->product_id}}','{{$featured_item->product_name}}','{{$featured_item->featured_image}}','{{$featured_item->selling_price}}')">কার্ট যোগ করুন</button>
                                             {{--                <a href="#" class="compare"><i class="flaticon-refresh-square-arrows"></i>Compare</a>--}}
                                             {{--                <a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i>Wishlist</a>--}}
                                         </div>

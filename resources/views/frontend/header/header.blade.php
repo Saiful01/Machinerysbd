@@ -5,7 +5,7 @@
         <div class="container">
             <!-- hotline -->
             <ul class="nav-top-left">
-                <li><a href="#">মেশিনারি শপে স্বাগতম। </a></li>
+                <li><a href="#"> মেশিনারি শপে স্বাগতম। </a></li>
             </ul><!-- hotline -->
             <!-- heder links -->
             <ul class="nav-top-right rhyssa-nav">
@@ -69,7 +69,7 @@
                                     <span></span>
                                     <span></span>
                                 </span>
-                                <span class="title-menu-mobile">Main menu</span>
+                                <span class="title-menu-mobile">প্রধান সূচি</span>
                             </span>
                     <div class="block-minicart dropdown style2">
                         <a class="minicart" href="/customer/checkout">
@@ -131,8 +131,8 @@
                                         <span class="price">@{{ totalPriceCountAll}}টাকা</span>
                                     </div>
                                     <div class="actions">
-                                        <a class="btn btn-viewcart" href="/customer/checkout">View cart</a>
-                                        <a class="btn btn-checkout" href="/customer/checkout">Checkout</a>
+                                        <a class="btn btn-viewcart" href="/customer/checkout">কার্ট দেখুন</a>
+                                        <a class="btn btn-checkout" href="/customer/checkout">চেকআউট</a>
                                     </div>
                                 </div>
                             </form>
